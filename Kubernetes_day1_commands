@@ -1,0 +1,25 @@
+kubectl version --short --client: Displays the client's Kubernetes version in short format.
+
+aws configure: Configures AWS CLI with your AWS access key, secret key, default region, and output format.
+
+aws eks --region ap-southeast-1 update-kubeconfig --name CHETHAN_K8: Configures kubectl to use an Amazon EKS cluster named CHETHAN_K8 in the specified region.
+
+aws eks --region ap-southeast-1 describe-cluster --name CHETHAN_K8 --query cluster.status: Retrieves the status of the specified Amazon EKS cluster named CHETHAN_K8 in the specified region.
+
+kubectl get pods: Lists all pods in the current Kubernetes namespace.
+
+kubectl apply -f mydeployment.yaml: Deploys resources defined in the mydeployment.yaml file to the Kubernetes cluster.
+
+kubectl get pods: Lists all pods in the current Kubernetes namespace after applying the deployment.
+
+kubectl get pods --output=wide: Lists pods in the current Kubernetes namespace with additional details, including node information.
+
+kubectl expose deployment chethandeployment --type=NodePort: Exposes the specified deployment, chethandeployment, as a NodePort service.
+
+kubectl get svc: Lists all services in the current Kubernetes namespace.
+
+kubectl delete pod chethandeployment-9bf75d47b-56rgs: Deletes a specific pod (container) with the given name.
+
+kubectl delete pods --all: Deletes all pods in the current Kubernetes namespace.
+
+kubectl apply -f mydeployment.yaml: Reapplies the changes from the mydeployment.yaml file to the Kubernetes cluster.
