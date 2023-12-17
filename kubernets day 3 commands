@@ -1,0 +1,27 @@
+aws configure
+aws eks --region ap-southeast-1 update-kubeconfig --name k8_chethan
+aws eks --region ap-southeast-1 describe-cluster --name k8_chethan --query cluster.status
+kubectl get nodes
+kubectl get nodes --output=wide
+kubectl get svc
+kubectl get pods
+kubectl get pods --output=wide
+kubectl apply -f mydeployment.yaml
+kubectl get pods --output=wide
+kubectl delete pod chethandeployment-9bf75d47b-27bm4
+kubectl get rs
+kubectl delete deployment chethandeployment
+kubectl get deployment
+kubectl get pods --output=wide
+kubectl apply -f mydeployment.yaml
+kubectl get pods --output=wide
+kubectl expose deployment cakeshopdeployment --type=NodePort
+kubectl get svc
+kubectl delete svc cakeshopdeployment
+kubectl expose deployment cakeshopdeployment --type=NodePort
+kubectl get svc
+kubectl get pods --output=wide
+kubectl apply -f jenkinsdeployment .yaml
+kubectl get pods --output=wide
+kubectl get svc
+kubectl delete svc cakeshopdeployment
