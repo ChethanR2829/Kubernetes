@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cakeshopdeployment
+spec:
+  selector:
+    matchLabels:
+      app: cakeshop
+  replicas: 6
+  template:
+    metadata:
+      labels:
+        app: cakeshop
+    spec:
+      containers:
+      - name: cakeshop
+        image: vnom1985/cakeshopvin
+        ports:
+        - containerPort: 80
